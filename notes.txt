@@ -1,0 +1,13 @@
+post=http://localhost:8080/api/auth/register
+get=http://localhost:8080/api/logout
+get=http://localhost:8080/api/isloggedin
+
+user
+put=http://localhost:8080/api/users/user
+get=http://localhost:8080/api/userinfo
+
+tasks
+post=http://localhost:8080/api/tasks/create
+get=http://localhost:8080/api/tasks/gettasks
+get=http://localhost:8080/api/tasks/gettask
+put=http://localhost:8080/api/tasks/:taskid
