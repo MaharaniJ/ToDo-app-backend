@@ -45,6 +45,7 @@ exports.loginController = async (req, res,next) => {
             return next(createError({status: 404, message:"email/password mismatch"}))
             //res.json('email/password mismatch');
         }
+        console.log(process.env.SECRETKEY)
         let token = jwt.sign({ id: user._id,name:user.name }, process.env.SECRETKEY, { expiresIn: "1d" });
         return res.cookie('access_token', token,{
             httpOnly: true,

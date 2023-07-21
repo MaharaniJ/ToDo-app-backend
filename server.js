@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const cookieParser = require('cookie-parser')
+const cors = require('cors')
 dotenv.config()
 const morgan = require('morgan')
 const allRoutes = require('./routes/index')
@@ -10,6 +11,7 @@ const app = express()
 app.use(express.json())
 app.use(morgan('tiny'))
 app.use(cookieParser())
+app.use(cors('*'))
  
 
 const connectDB = async ()=>{

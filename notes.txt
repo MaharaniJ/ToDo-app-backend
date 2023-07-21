@@ -1,6 +1,6 @@
 post=http://localhost:8080/api/auth/register
 get=http://localhost:8080/api/logout
-get=http://localhost:8080/api/isloggedin
+get=http://localhost:8080/api/is_logged_in
 
 user
 put=http://localhost:8080/api/users/user
